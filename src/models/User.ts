@@ -7,7 +7,7 @@ import {
 } from 'typeorm'
 
 @Entity('users')
-class Users {
+class User {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
@@ -20,6 +20,9 @@ class Users {
   @Column()
   password: string
 
+  @Column()
+  avatar: string
+
   @CreateDateColumn()
   createdAt: Date
 
@@ -27,4 +30,4 @@ class Users {
   updatedAt: Date
 }
 
-export default Users
+export default User
